@@ -2,21 +2,22 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>리디렉션 테스트</title>
+  <title>POST 리디렉션 테스트</title>
 
-  <!-- 리디렉션: content="초단위;url=..." -->
-  <meta http-equiv="refresh" content="0.1; url=https://benework.skmns.co.kr/kto/working.html">
-
-  <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      padding: 50px;
-    }
-  </style>
+  <script>
+    // 페이지 로드 후 100ms 뒤에 자동으로 POST 전송
+    setTimeout(function () {
+      document.getElementById("postForm").submit();
+    }, 1000);  // 100ms
+  </script>
 </head>
 <body>
-  <h1>잠시 후 이동합니다…</h1>
-  <p>0.1초 뒤 <code>https://benework.skmns.co.kr/kto/working.html</code> 으로 자동 리디렉션됩니다.</p>
+  <h1>POST 요청 중...</h1>
+
+  <form id="postForm" action="https://benework.skmns.co.kr/kto/working.html" method="POST">
+    <input type="hidden" name="token" value="abc123">
+    <input type="hidden" name="userId" value="testUser">
+    <!-- 필요한 값들을 hidden input 으로 추가 -->
+  </form>
 </body>
 </html>
