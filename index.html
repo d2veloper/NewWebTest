@@ -1,10 +1,22 @@
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-	<title>scheme test</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="UTF-8">
+  <title>리디렉션 테스트</title>
+
+  <!-- 리디렉션: content="초단위;url=..." -->
+  <meta http-equiv="refresh" content="1; url=https://benework.skmns.co.kr/kto/working.html">
+
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+  </style>
 </head>
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 <body>
-<a href="benepia://change_tab?mnuId=M00326&callback=trpTyp(0)&trpPrdTypCd=5">changeTab</a>
+  <h1>잠시 후 이동합니다…</h1>
+  <p>1초 뒤 <code>https://benework.skmns.co.kr/kto/working.html</code> 으로 자동 리디렉션됩니다.</p>
 </body>
 </html>
